@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+D:\GitHub\Java-Udemy\ws-Eclipse\.metadata\.plugins\org.eclipse.jdt.core
+4292898885.index
+1865797976.index
+2368017171.index
+2859772256.index
