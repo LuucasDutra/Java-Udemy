@@ -29,7 +29,7 @@ public class program {
 		Date birthDate = sdf.parse(sc.next());
 		Client client = new Client(clientName, clientEmail, birthDate);
 		
-		System.out.print("Enter order data: ");
+		System.out.println("Enter order data: ");
 		System.out.print("Status: ");
 		OrderStatus status = OrderStatus.valueOf(sc.next());
 		
@@ -40,22 +40,21 @@ public class program {
 		for (int i=0; i<items; i++) {
 			System.out.println("Enter #" + (i + 1) + " item data:");
 			System.out.print("Product name: ");
-			String productName = sc.next();
+			sc.nextLine();
+			String productName = sc.nextLine();
 			System.out.print("Product price: ");
 			Double price = sc.nextDouble();
-			Product product = new Product(productName, price);
 			System.out.print("Quantity: ");
 			Integer quantity = sc.nextInt();
+			
+			Product product = new Product(productName, price);
 			OrderItem orderItem = new OrderItem(quantity, price, product);
+			
 			order.addItem(orderItem);
 		}
 		System.out.println();
 		System.out.println("ORDER SUMMARY:");
 		System.out.println(order);
-		
-		sc.close();
-		
-		
 		
 		sc.close();
 	}

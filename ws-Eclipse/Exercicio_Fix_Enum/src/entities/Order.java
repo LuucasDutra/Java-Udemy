@@ -18,7 +18,6 @@ public class Order {
 	private List<OrderItem> items = new ArrayList<>();
 	
 	public Order(Date moment, OrderStatus status, Client client) {
-
 		this.moment = moment;
 		this.status = status;
 		this.client = client;
